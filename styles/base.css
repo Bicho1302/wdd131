@@ -1,11 +1,11 @@
-/* Global Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Body styling */
+
   body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -15,7 +15,7 @@
     padding: 0;
   }
   
-  /* Header styling */
+
   header {
     background-color: #333;
     color: #fff;
@@ -23,12 +23,12 @@
     text-align: center;
   }
   
-  /* Header h1 styling */
+
   header h1 {
     margin-bottom: 1rem;
   }
   
-  /* Navigation Styling */
+
   nav {
     display: flex;
     justify-content: center;
@@ -53,10 +53,10 @@
   }
   
   nav ul li a:hover {
-    color: #ff9900;  /* Hover color */
+    color: #ff9900;  
   }
   
-  /* Main Section styling */
+  
   main {
     padding: 2rem;
     max-width: 1200px;
@@ -66,14 +66,14 @@
     justify-content: space-between;
   }
   
-  /* Card styling */
+ 
   .card {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 2rem;
-    width: 48%; /* Two cards per row */
+    width: 48%; 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   
@@ -101,7 +101,7 @@
     color: #ff9900;
   }
   
-  /* Footer styling */
+  
   footer {
     background-color: #333;
     color: #fff;
@@ -113,10 +113,10 @@
     margin-bottom: 0.5rem;
   }
   
-  /* Responsive design for smaller screens */
+  
   @media (max-width: 768px) {
     .card {
-      width: 100%;  /* Cards take full width on small screens */
+      width: 100%;  
     }
     nav ul {
       flex-direction: column;
