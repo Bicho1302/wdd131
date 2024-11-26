@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temples</title>
+    <link rel="stylesheet" href="styles/temples.css">  <!-- Mobile-first base styles -->
+    <link rel="stylesheet" href="styles/temples-large.css">  <!-- Larger screen styles -->
+    <script src="temples.js" defer></script> <!-- Include JavaScript file -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Temple Album</h1>
+        
+        <!-- Hamburger button for mobile view -->
+        <div class="hamburger-menu" id="hamburgerMenu">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        
+        <nav id="navMenu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#old">Old</a></li>
+                <li><a href="#new">New</a></li>
+                <li><a href="#large">Large</a></li>
+                <li><a href="#small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+
+        
+        <main>
+            <h2>Home</h2> <!-- This will change dynamically based on selected menu item -->
+    
+            <!-- Figure Elements (9 placeholder temples) -->
+            <div class="temple-gallery">
+                <figure>
+                    <img src="images/058-Guayaquil-Ecuador-Temple.jpg" alt="Temple 1">
+                    <figcaption>Guayaquil-Ecuador</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/bahia-blanca-argentina-temple-24944-main.jpg" alt="Temple 2">
+                    <figcaption>Bahia Blanca-Argentina</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/barcelona-spain-temple-43015-main.jpg" alt="Temple 3">
+                    <figcaption>Barcelona-Spain</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/ephraim-utah-temple-25337-main.jpg" alt="Temple 4">
+                    <figcaption>Utah-United States</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lisbon-portugal-temple-6315-main.jpg" alt="Temple 5">
+                    <figcaption>Lisbon-Portugal</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rome-italy-temple-2642-main.jpg" alt="Temple 6">
+                    <figcaption>Rome-Italy</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/seoul-korea-temple-22305-main.jpg" alt="Temple 7">
+                    <figcaption>Seoul-Korea</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/st.-paul-minnesota-temple-14544-main.jpg" alt="Temple 8">
+                    <figcaption>Minnesota-United States</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/tokyo-japan-temple-26340-main.jpg" alt="Temple 9">
+                    <figcaption>Tokyo-Japan</figcaption>
+                </figure>
+            </div>
+        </main>
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; <span id="year"></span> Temples Inc. All rights reserved.</p>
+        <p>Last modified: <span id="lastModified"></span></p>
+        <p>Visit our <a href="privacy-policy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

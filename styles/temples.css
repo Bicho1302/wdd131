@@ -1,0 +1,107 @@
+/* base.css - Mobile-first Styles */
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+/* Hamburger menu styling (mobile view) */
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Mobile-first media query */
+@media (max-width: 600px) {
+    nav {
+        display: none; /* Hide navigation links on small screens */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger icon on small screens */
+    }
+
+    nav.active {
+        display: flex; /* Show menu items when 'active' class is added */
+    }
+}
+
+/* Styling for nav items when menu is active (toggled) */
+nav.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul li a {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}

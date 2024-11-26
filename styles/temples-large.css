@@ -1,0 +1,124 @@
+/* desktop.css - Horizontal Navigation for Larger Screens */
+
+/* General Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;  /* Green background */
+    color: white;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+nav {
+    background-color: #333;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* For larger screens (>= 1024px) */
+@media (min-width: 1024px) {
+    /* Navigation Menu Styles */
+    nav ul {
+        list-style-type: none;
+        display: flex;  /* Use flexbox for horizontal layout */
+        justify-content: center;  /* Center the nav items horizontally */
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        padding: 0 30px;  /* Add spacing between menu items */
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 1.4em;  /* Larger text for better readability */
+        padding: 10px 0;  /* Add padding for clickable area */
+    }
+
+    nav ul li a:hover {
+        color: #4CAF50;  /* Change color on hover */
+    }
+
+    /* Main Content Section */
+    main {
+        padding: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    main h2 {
+        font-size: 3em;
+        color: #4CAF50;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    /* Figure Elements (Images) */
+    .temple-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+        gap: 20px;
+        width: 100%;
+    }
+
+    figure {
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    figure img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    figcaption {
+        font-size: 1.2em;
+        text-align: center;
+        margin-top: 15px;
+        color: #555;
+    }
+
+    /* Footer Section */
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    footer a {
+        color: #4CAF50;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+}
+
