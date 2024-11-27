@@ -5,17 +5,13 @@ document.getElementById('year').textContent = year;
 const lastModified = document.lastModified;
 document.getElementById('lastModified').textContent = lastModified;
 
-// Toggle navigation menu on mobile
-const hamburgerMenu = document.getElementById('hamburgerMenu');
-const navMenu = document.getElementById('navMenu');
+// JavaScript for Hamburger Menu Toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('nav');
 
-hamburgerMenu.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    
-    // Change hamburger icon to "X" when menu is open
-    if (navMenu.classList.contains('active')) {
-        hamburgerMenu.innerHTML = '&#10005;'; // X icon
-    } else {
-        hamburgerMenu.innerHTML = '&#9776;'; // Hamburger icon
-    }
+    hamburgerMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('active');  // Toggle the 'active' class
+        hamburgerMenu.textContent = navMenu.classList.contains('active') ? '✖' : '☰';  // Toggle icon
+    });
 });

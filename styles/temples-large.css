@@ -1,4 +1,4 @@
-/* desktop.css - Horizontal Navigation for Larger Screens */
+/* desktop.css - 3x3 Grid Layout with Larger Images */
 
 /* General Reset and Body Styles */
 * {
@@ -33,9 +33,8 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* For larger screens (>= 1024px) */
+/* Navigation Menu for Larger Screens */
 @media (min-width: 1024px) {
-    /* Navigation Menu Styles */
     nav ul {
         list-style-type: none;
         display: flex;  /* Use flexbox for horizontal layout */
@@ -53,6 +52,7 @@ nav {
         color: white;
         font-weight: bold;
         font-size: 1.4em;  /* Larger text for better readability */
+        display: block;  /* Make the links block-level */
         padding: 10px 0;  /* Add padding for clickable area */
     }
 
@@ -75,11 +75,12 @@ nav {
         margin-bottom: 40px;
     }
 
-    /* Figure Elements (Images) */
+    /* Figure Elements with Larger Images */
     .temple-gallery {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
-        gap: 20px;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-template-rows: auto; /* Automatically adjust rows */
+        gap: 30px; /* Space between grid items */
         width: 100%;
     }
 
@@ -89,16 +90,18 @@ nav {
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
 
+    /* Make All Images Larger */
     figure img {
-        width: 100%;
-        height: auto;
-        border-radius: 5px;
+        width: 100%;  /* Stretch to fill parent container width */
+        max-height: 350px;  /* Set a larger uniform height */
+        object-fit: cover;  /* Ensure the image covers the space proportionally */
+        border-radius: 5px;  /* Optional rounded corners */
     }
 
     figcaption {
-        font-size: 1.2em;
+        font-size: 1.3em;
         text-align: center;
-        margin-top: 15px;
+        margin-top: 10px;
         color: #555;
     }
 
@@ -121,4 +124,3 @@ nav {
         text-decoration: underline;
     }
 }
-

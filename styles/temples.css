@@ -1,6 +1,6 @@
-/* base.css - Mobile-first Styles */
+/* mobile.css - Mobile View with Hamburger Menu and Responsive Image Layout */
 
-/* General styles */
+/* General Reset and Body Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,99 +9,128 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
+/* Header Styles */
 header {
-    background-color: #4CAF50; /* Green background */
+    background-color: #4CAF50;  /* Green background */
     color: white;
     padding: 10px;
     text-align: center;
+    position: relative;
 }
 
 header h1 {
     font-size: 2em;
+    margin: 0;
 }
 
-nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #333;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-nav ul li {
-    padding: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #4CAF50;
-}
-
-/* Hamburger menu styling (mobile view) */
+/* Hamburger Menu */
 .hamburger-menu {
-    display: none;
     font-size: 30px;
     cursor: pointer;
     background-color: #333;
     color: white;
     padding: 10px;
-    border-radius: 5px;
+    border: none;
+    display: block;  /* Display the hamburger menu on mobile */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
 }
 
-/* Mobile-first media query */
-@media (max-width: 600px) {
-    nav {
-        display: none; /* Hide navigation links on small screens */
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hamburger-menu {
-        display: block; /* Show hamburger icon on small screens */
-    }
-
-    nav.active {
-        display: flex; /* Show menu items when 'active' class is added */
-    }
-}
-
-/* Styling for nav items when menu is active (toggled) */
-nav.active {
-    display: flex;
+/* Navigation Menu (Hidden by Default) */
+nav {
+    display: none;  /* Hide the navigation menu initially */
     flex-direction: column;
-    align-items: center;
     background-color: #333;
     padding: 10px 0;
 }
 
+nav.active {
+    display: flex;  /* Show the navigation menu when active */
+}
+
 nav ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    list-style: none;
     padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 nav ul li {
     padding: 10px 0;
-    width: 100%;
-    text-align: center;
 }
 
 nav ul li a {
-    padding: 10px;
-    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;  /* Change color on hover */
+}
+
+/* Main Content Section */
+main {
+    padding: 20px;
+}
+
+main h2 {
+    font-size: 1.8em;
+    color: #4CAF50;
     text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Single Column Layout for Images */
+.temple-gallery {
+    display: grid;
+    grid-template-columns: 1fr;  /* Single column layout */
+    gap: 20px;  /* Space between grid items */
+    width: 100%;
+}
+
+figure {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Make Images Responsive and Uniform */
+figure img {
+    width: 100%;  /* Fill the container */
+    max-height: 250px;  /* Larger images for mobile view */
+    object-fit: cover;  /* Ensure images retain proportions */
+    border-radius: 5px;
+}
+
+figcaption {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
