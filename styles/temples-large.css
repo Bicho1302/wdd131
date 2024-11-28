@@ -30,11 +30,11 @@ header h1 {
     margin: 0;
 }
 
-/* Hamburger Menu (Hidden on Larger Screens) */
-.hamburger-menu {
-    display: none; /* Hide the hamburger menu for larger screens */
-}
-
+@media (min-width: 1024px) {
+    /* Navigation Menu (Horizontal on Large Screens) */
+    .hamburger-menu {
+        display: none; /* Hide hamburger on larger screens */
+    }
 /* Navigation Menu (Centered) */
 nav {
     display: flex;
@@ -129,4 +129,5 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
 }
