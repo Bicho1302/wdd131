@@ -1,4 +1,4 @@
-/* mobile.css - Mobile View with Hamburger Menu and Responsive Image Layout */
+ /*Mobile View with Hamburger Menu and Responsive Image Layout */
 
 /* General Reset and Body Styles */
 * {
@@ -73,7 +73,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #4CAF50;  /* Change color on hover */
+    color: #cbcecb;  /* Change color on hover */
 }
 
 /* Main Content Section */

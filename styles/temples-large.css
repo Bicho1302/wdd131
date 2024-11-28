@@ -1,6 +1,6 @@
-/* desktop.css - 3x3 Grid Layout with Larger Images */
+/* temples-large.css - Larger Screen Styles */
 
-/* General Reset and Body Styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -13,114 +13,120 @@ body {
     color: #333;
 }
 
-/* Header Styles */
+/* Header */
 header {
     background-color: #4CAF50;  /* Green background */
     color: white;
     padding: 20px;
-    text-align: left;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center aligns the entire header content */
+    display: flex;
+    flex-direction: column; /* Stack header content vertically */
+    align-items: center;
+    gap: 10px; /* Adds spacing between elements */
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 3em; /* Larger font size for emphasis */
     margin: 0;
 }
 
-nav {
-    background-color: #333;
-    padding: 15px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Hamburger Menu (Hidden on Larger Screens) */
+.hamburger-menu {
+    display: none; /* Hide the hamburger menu for larger screens */
 }
 
-/* Navigation Menu for Larger Screens */
-@media (min-width: 1024px) {
-    nav ul {
-        list-style-type: none;
-        display: flex;  /* Use flexbox for horizontal layout */
-        justify-content: center;  /* Center the nav items horizontally */
-        margin: 0;
-        padding: 0;
-    }
+/* Navigation Menu (Centered) */
+nav {
+    display: flex;
+    justify-content: center; /* Center navigation menu horizontally */
+    align-items: center;
+    margin-top: 10px;
+}
 
-    nav ul li {
-        padding: 0 30px;  /* Add spacing between menu items */
-    }
+nav ul {
+    list-style: none;
+    display: flex; /* Arrange navigation items horizontally */
+    margin: 0;
+    padding: 0;
+    gap: 30px; /* Adds spacing between nav items */
+}
 
-    nav ul li a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        font-size: 1.4em;  /* Larger text for better readability */
-        display: block;  /* Make the links block-level */
-        padding: 10px 0;  /* Add padding for clickable area */
-    }
+nav ul li {
+    margin: 0;
+}
 
-    nav ul li a:hover {
-        color: #4CAF50;  /* Change color on hover */
-    }
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em; /* Slightly larger font for visibility */
+    font-weight: bold;
+    padding: 10px 15px; /* Add padding for clickable area */
+    border-radius: 5px;
+}
 
-    /* Main Content Section */
-    main {
-        padding: 40px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+nav ul li a:hover {
+    color: #333;
+    background-color: #cfd1cf;
+}
 
-    main h2 {
-        font-size: 3em;
-        color: #4CAF50;
-        width: 100%;
-        margin-bottom: 40px;
-    }
+/* Main Content */
+main {
+    padding: 40px;
+}
 
-    /* Figure Elements with Larger Images */
-    .temple-gallery {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 columns */
-        grid-template-rows: auto; /* Automatically adjust rows */
-        gap: 30px; /* Space between grid items */
-        width: 100%;
-    }
+main h2 {
+    font-size: 2.5em; /* Larger title */
+    margin-bottom: 30px;
+    color: #4CAF50;
+    text-align: center;
+}
 
-    figure {
-        background-color: white;
-        padding: 20px;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    }
+/* Temple Gallery (3x3 Grid) */
+.temple-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Three columns */
+    gap: 40px; /* Increase spacing between items */
+    justify-items: center;
+}
 
-    /* Make All Images Larger */
-    figure img {
-        width: 100%;  /* Stretch to fill parent container width */
-        max-height: 350px;  /* Set a larger uniform height */
-        object-fit: cover;  /* Ensure the image covers the space proportionally */
-        border-radius: 5px;  /* Optional rounded corners */
-    }
+figure {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Allow for larger images */
+}
 
-    figcaption {
-        font-size: 1.3em;
-        text-align: center;
-        margin-top: 10px;
-        color: #555;
-    }
+/* Uniform Image Size */
+figure img {
+    width: 100%;
+    height: 350px; /* Increased height */
+    object-fit: cover;
+    border-radius: 10px; /* Slightly larger border radius */
+}
 
-    /* Footer Section */
-    footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 20px;
-        margin-top: 40px;
-    }
+figcaption {
+    margin-top: 15px;
+    font-size: 1.4em; /* Larger font size for captions */
+    color: #555;
+    text-align: center;
+}
 
-    footer a {
-        color: #4CAF50;
-        text-decoration: none;
-        font-weight: bold;
-    }
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
 
-    footer a:hover {
-        text-decoration: underline;
-    }
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
