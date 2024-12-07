@@ -1,18 +1,23 @@
-// Function to calculate the wind chill based on temperature and wind speed
-function calculateWindChill(temperature, windSpeed) {
-    if ((temperature <= 10 && windSpeed > 4.8) || (temperature <= 50 && windSpeed > 3)) {
-        return Math.round(13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16));
-    } else {
-        return "N/A";
+document.addEventListener('DOMContentLoaded', () => {
+    const temp = 10; // Static temperature
+    const windSpeed = 5; // Static wind speed
+
+    function calculateWindChill(temp, windSpeed) {
+        return (
+            13.12 +
+            0.6215 * temp -
+            11.37 * Math.pow(windSpeed, 0.16) +
+            0.3965 * temp * Math.pow(windSpeed, 0.16)
+        ).toFixed(1);
     }
-}
 
-// Static values for weather data
-const temperature = 5; // in Celsius
-const windSpeed = 10; // in km/h
+    const windChill =
+        temp <= 10 && windSpeed > 4.8
+            ? calculateWindChill(temp, windSpeed)
+            : "N/A";
 
-// Calculate wind chill and display it
-document.getElementById("wind-chill").textContent = calculateWindChill(temperature, windSpeed);
-
-// Display the last modified date
-document.getElementById("last-modified").textContent = document.lastModified;
+    document.getElementById('wind-chill').textContent = windChill;
+    document.getElementById('last-modified').textContent = new Date(
+        document.lastModified
+    ).toLocaleString();
+});

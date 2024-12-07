@@ -1,63 +1,56 @@
-/* Mobile-specific styles */
-
-/* Global CSS Variables */
+/* Global Variables */
 :root {
-    --primary-color: #e63946; /* Red */
-    --secondary-color: #f1faee; /* Light Gray */
-    --text-color: #1d3557; /* Dark Blue */
-    --background-color: #f1faee;
+    --primary-bg: #fef6e4;
+    --primary-color: #3f88c5;
+    --secondary-bg: #f8ede3;
+    --secondary-color: #ff6700;
+    --text-color: #212529;
 }
 
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
 }
 
 header {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 20px;
-}
-
-section {
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 100%;
-}
-
-.image-container {
-    text-align: center;
-    margin: 20px 0;
+    padding: 1.5rem 0;
+    font-size: 2.5rem;
 }
 
 .hero-image {
     width: 100%;
     height: auto;
-    max-width: 100%;
+    border-bottom: 5px solid var(--primary-color);
 }
 
-.data, .weather {
-    margin: 20px 0;
+.data-box, .weather-box {
+    margin: 1rem auto;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: var(--secondary-bg);
+    width: 90%;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
-.weather-icon {
-    display: none;
-}
-
-.weather-info p {
-    font-size: 1.1em;
-    line-height: 1.5em;
+.data-box h2, .weather-box h2 {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.7rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
 footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 1.5rem;
+    font-size: 0.9rem;
 }

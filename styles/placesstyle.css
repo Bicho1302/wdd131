@@ -1,71 +1,66 @@
-/* Larger screen-specific styles */
-
-/* Global CSS Variables */
+/* Global Variables */
 :root {
-    --primary-color: #e63946; /* Red */
-    --secondary-color: #f1faee; /* Light Gray */
-    --text-color: #1d3557; /* Dark Blue */
-    --background-color: #f1faee;
+    --primary-bg: #e5e5e5;
+    --primary-color: #2d6a4f;
+    --secondary-bg: #f8f8f8;
+    --secondary-color: #4a7c59;
+    --text-color: #212529;
 }
 
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
 }
 
 header {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 1.5rem 0;
+    font-size: 3rem;
 }
 
-section {
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-.image-container {
-    text-align: center;
-    margin: 20px 0;
+.hero-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
 }
 
 .hero-image {
     width: 100%;
     height: auto;
-    max-width: 100%;
+    border-bottom: 5px solid var(--primary-color);
 }
 
-.data, .weather {
-    margin: 20px 0;
+.data-box, .weather-box {
+    position: absolute;
+    background: var(--secondary-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-.weather-icon {
-    font-size: 1.5em;
-    padding-left: 10px;
+.data-box {
+    top: 20%;
+    left: 10%;
+    max-width: 300px;
 }
 
-.weather-info p {
-    font-size: 1.1em;
-    line-height: 1.5em;
+.weather-box {
+    top: 20%;
+    right: 10%;
+    max-width: 300px;
 }
 
 footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .weather-icon {
-        display: none;
-    }
+    padding: 1.5rem;
 }

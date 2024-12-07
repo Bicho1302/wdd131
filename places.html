@@ -3,51 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place Page</title>
-    <link rel="stylesheet" href="styles/places-mobile.css">
+    <title>Galapagos</title>
+    <link rel="stylesheet" href="styles/places-mobile.css" media="(max-width: 768px)">
     <link rel="stylesheet" href="styles/placesstyle.css" media="(min-width: 769px)">
+    <script src="scripts/weather.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Place Title</h1>
+        <h1>Galapagos</h1>
     </header>
 
-    <section>
-        <div class="image-container">
-            <picture>
-                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
-                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
-                <img src="images/hero-large.webp" alt="Place Image" class="hero-image">
-            </picture>
-        </div>
+    <section class="hero-section">
+        <picture>
+            <source srcset="images/turttle-small.webp" media="(max-width: 768px)">
+            <source srcset="images/turttle-large.webp" media="(min-width: 769px)">
+            <img src="images/turttle.jpg" alt="Wildlife in Galapagos" class="hero-image">
+        </picture>
 
-        <div class="data">
+        <div class="data-box">
             <h2>Data</h2>
             <ul>
-                <li><strong>Label:</strong> Value</li>
-                <li><strong>Label:</strong> Value</li>
-                <li><strong>Label:</strong> Value</li>
-                <li><strong>Label:</strong> Value</li>
+                <li><strong>Area:</strong> 8,010 sq km</li>
+                <li><strong>Population:</strong> 25,244</li>
+                <li><strong>Capital:</strong> Puerto Baquerizo Moreno</li>
+                <li><strong>Languages:</strong> Spanish</li>
+                <li><strong>Currency:</strong> US Dollar</li>
+                <li><strong>Time Zone:</strong> UTC-6</li>
+                <li><strong>Calling Code:</strong> +593</li>
+                <li><strong>Internet TLD:</strong> .ec</li>
             </ul>
         </div>
 
-        <div class="weather">
+        <div class="weather-box">
             <h2>Weather <span class="weather-icon">⛅</span></h2>
-            <div class="weather-info">
-                <p><strong>Temperature:</strong> 5°C</p>
-                <p><strong>Wind Speed:</strong> 10 km/h</p>
-                <p><strong>Wind Chill:</strong> <span id="wind-chill">Calculating...</span></p>
-            </div>
+            <p><strong>Temperature:</strong> 25°C</p>
+            <p><strong>Conditions:</strong> Sunny</p>
+            <p><strong>Wind:</strong> 15 km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="wind-chill">Calculating...</span></p>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            Standard Footer content - copyright - name - location - Last modified: <span id="last-modified"></span>
-        </div>
+        <p>©2024 🌍 Discover Galapagos</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
-
-    <script src="scripts/weather.js" defer></script>
 </body>
 </html>
-
