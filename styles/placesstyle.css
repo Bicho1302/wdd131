@@ -1,23 +1,14 @@
-/* Global Variables */
-:root {
-    --primary-bg: #e5e5e5;
-    --primary-color: #2d6a4f;
-    --secondary-bg: #f8f8f8;
-    --secondary-color: #4a7c59;
-    --text-color: #212529;
-}
-
 /* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--primary-bg);
-    color: var(--text-color);
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: var(--primary-color);
+    background-color: #2d6a4f;
     color: white;
     text-align: center;
     padding: 1.5rem 0;
@@ -26,41 +17,52 @@ header {
 
 .hero-section {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
 }
 
 .hero-image {
-    width: 100%;
+    width: 100%; /* Original size restored */
     height: auto;
-    border-bottom: 5px solid var(--primary-color);
+    margin: 0 auto;
+    display: block;
 }
 
+/* Data and Weather Boxes */
 .data-box, .weather-box {
     position: absolute;
-    background: var(--secondary-bg);
-    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px; /* Larger padding for desktop */
+    width: 35%; /* Increased box size */
     border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .data-box {
-    top: 20%;
-    left: 10%;
-    max-width: 300px;
+    top: 15%;
+    left: 5%;
 }
 
 .weather-box {
-    top: 20%;
-    right: 10%;
-    max-width: 300px;
+    top: 15%;
+    right: 5%;
+}
+
+.data-box h2, .weather-box h2 {
+    background-color: #2d6a4f;
+    color: white;
+    padding: 0.7rem;
+    margin: -1rem -1rem 1rem -1rem;
+    border-radius: 5px 5px 0 0;
+}
+
+.data-box ul, .weather-box p {
+    font-size: 1.2rem; /* Slightly larger text size for desktop */
+    line-height: 1.5;
 }
 
 footer {
-    background-color: var(--primary-color);
+    background-color: #2d6a4f;
     color: white;
     text-align: center;
     padding: 1.5rem;
+    font-size: 1rem;
 }
