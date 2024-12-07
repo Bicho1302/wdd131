@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Page</title>
+    <link rel="stylesheet" href="styles/places-mobile.css">
+    <link rel="stylesheet" href="styles/placesstyle.css" media="(min-width: 769px)">
+</head>
+<body>
+    <header>
+        <h1>Place Title</h1>
+    </header>
+
+    <section>
+        <div class="image-container">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+                <img src="images/hero-large.webp" alt="Place Image" class="hero-image">
+            </picture>
+        </div>
+
+        <div class="data">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Label:</strong> Value</li>
+                <li><strong>Label:</strong> Value</li>
+                <li><strong>Label:</strong> Value</li>
+                <li><strong>Label:</strong> Value</li>
+            </ul>
+        </div>
+
+        <div class="weather">
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <div class="weather-info">
+                <p><strong>Temperature:</strong> 5°C</p>
+                <p><strong>Wind Speed:</strong> 10 km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="wind-chill">Calculating...</span></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            Standard Footer content - copyright - name - location - Last modified: <span id="last-modified"></span>
+        </div>
+    </footer>
+
+    <script src="scripts/weather.js" defer></script>
+</body>
+</html>
+
