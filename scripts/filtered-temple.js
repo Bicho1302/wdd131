@@ -85,7 +85,7 @@ function filterTemples(filter) {
             break;
         case "old":
             filteredTemples = temples.filter((temple) => parseInt(temple.dedicated.split(",")[0]) < 1900);
-            className = "small-images"; 
+            className = "old-small-images"; 
             break;
         case "new":
             filteredTemples = temples.filter((temple) => parseInt(temple.dedicated.split(",")[0]) > 2000);
@@ -96,7 +96,7 @@ function filterTemples(filter) {
             break;
         case "small":
             filteredTemples = temples.filter((temple) => temple.size < 10000);
-            className = "small-images"; // Smaller image size for 'small'
+            className = "more-small-images"; // Smaller image size for 'small'
             break;
         default:
             filteredTemples = temples;
