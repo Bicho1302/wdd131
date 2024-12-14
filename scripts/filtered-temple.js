@@ -48,6 +48,27 @@ const temples = [
         dedicated: "1980, November, 17",
         size: 96500,
         image: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    },
+    {
+        name: "Tokoy Japan",
+        location: "Tokyo, Japan",
+        dedicated: " 27 October 1980",
+        size: "54000",
+        image: "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-26340-main.jpg"
+    },
+    {
+        name: "Paris France",
+        location: "Paris,France",
+        dedicated: "2017, May, 21",
+        size: "44000",
+        image: "https://churchofjesuschristtemples.org/assets/img/temples/paris-france-temple/paris-france-temple-2056-main.jpg"
+    },
+    {
+        name: "Dallas Texas",
+        location: "Dallas, Texas",
+        dedicated: " 1984, October, 24",
+        size: "44000",
+        image: "https://churchofjesuschristtemples.org/assets/img/temples/dallas-texas-temple/dallas-texas-temple-55240-main.jpg"
     }
 ];
 
