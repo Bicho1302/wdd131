@@ -55,11 +55,14 @@ const temples = [
 const container = document.getElementById("temples-container");
 
 // Function to render all temples
-function renderTemples(filteredTemples) {
+function renderTemples(filteredTemples, className = "") {
     container.innerHTML = ""; // Clear the container
     filteredTemples.forEach((temple) => {
         const card = document.createElement("div");
         card.classList.add("temple-card");
+        if (className) {
+            card.classList.add(className); // Add class for special sections like 'small' or 'large'
+        }
         card.innerHTML = `
             <img src="${temple.image}" alt="${temple.name}" loading="lazy">
             <h2>${temple.name}</h2>
@@ -71,12 +74,10 @@ function renderTemples(filteredTemples) {
     });
 }
 
-// Initial render with all temples
-renderTemples(temples);
-
 // Function to filter temples based on menu options
 function filterTemples(filter) {
     let filteredTemples = [];
+    let className = ""; // Optional class for styling
 
     switch (filter) {
         case "all":
@@ -84,19 +85,25 @@ function filterTemples(filter) {
             break;
         case "old":
             filteredTemples = temples.filter((temple) => parseInt(temple.dedicated.split(",")[0]) < 1900);
+            className = "small-images"; 
             break;
         case "new":
             filteredTemples = temples.filter((temple) => parseInt(temple.dedicated.split(",")[0]) > 2000);
             break;
         case "large":
             filteredTemples = temples.filter((temple) => temple.size > 90000);
+            className = "small-images"; // Smaller image size for 'large'
             break;
         case "small":
             filteredTemples = temples.filter((temple) => temple.size < 10000);
+            className = "small-images"; // Smaller image size for 'small'
             break;
         default:
             filteredTemples = temples;
     }
 
-    renderTemples(filteredTemples);
+    renderTemples(filteredTemples, className);
 }
+
+// Initial render with all temples
+renderTemples(temples);

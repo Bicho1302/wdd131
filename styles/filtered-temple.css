@@ -82,7 +82,10 @@ nav ul li button:hover {
     margin: 0.5rem 0;
     color: #555;
 }
-
+.temple-card.small-images img {
+    max-width: 60%;
+    height: auto;
+}
 /* Footer */
 footer {
     text-align: center;
