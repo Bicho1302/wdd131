@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif; 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,6 +12,8 @@ header {
     color: white;
     text-align: center;
     padding: 1rem;
+    font-family: 'Times New Roman', Times, serif; 
+
 }
 
 header h1 {
@@ -39,6 +41,8 @@ nav ul li button {
     color: #4caf50;
     cursor: pointer;
     font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif; /* Ensures cards use the font */
+
 }
 
 nav ul li button:hover {
@@ -61,6 +65,8 @@ nav ul li button:hover {
     overflow: hidden;
     text-align: center;
     padding: 1rem;
+    font-family: 'Times New Roman', Times, serif; 
+
 }
 
 .temple-card img {
@@ -100,4 +106,6 @@ footer {
     padding: 1rem;
     background-color: #4caf50;
     color: white;
+    font-family: 'Times New Roman', Times, serif; 
+
 }
