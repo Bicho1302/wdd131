@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temples</title>
+    <link rel="stylesheet" href="styles/filtered-temple.css">
+    <script src="scripts/filtered-temple.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Filtered Temples</h1>
+        <nav>
+            <ul>
+                <li><button onclick="filterTemples('all')">Home</button></li>
+                <li><button onclick="filterTemples('old')">Old</button></li>
+                <li><button onclick="filterTemples('new')">New</button></li>
+                <li><button onclick="filterTemples('large')">Large</button></li>
+                <li><button onclick="filterTemples('small')">Small</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="temples-container">
+          
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Filtered Temples</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script>
+        // Automatically populate the year and last modified date in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+// Corrected temples array
+const temples = [
+    {
+        name: "Aba Nigeria",
+        location: "Aba, Nigeria",
+        dedicated: "2005, August, 7",
+        size: 11500,
+        image: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    },
+    {
+        name: "Manti Utah",
+        location: "Manti, Utah, United States",
+        dedicated: "1877, May, 17",
+        size: 74700,
+        image: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+    },
+    {
+        name: "Payson Utah",
+        location: "Payson, Utah, United States",
+        dedicated: "2015, June, 7",
+        size: 96630,
+        image: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+    },
+    {
+        name: "Yigo Guam",
+        location: "Yigo, Guam",
+        dedicated: "2021, May, 23",
+        size: 6800,
+        image: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+    },
+    {
+        name: "Salt Lake City",
+        location: "Salt Lake City, Utah, United States",
+        dedicated: "1893, April, 6",
+        size: 126000,
+        image: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+    },
+    {
+        name: "Provo City Center",
+        location: "Provo, Utah, United States",
+        dedicated: "2016, March, 20",
+        size: 85000,
+        image: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+    },
+    {
+        name: "Seattle Washington",
+        location: "Bellevue, Washington, United States",
+        dedicated: "1980, November, 17",
+        size: 96500,
+        image: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    }
+];
+
+// Get the container where temples will be rendered
+const container = document.getElementById("temples-container");
+
+// Function to render all temples
+function renderTemples(filteredTemples) {
+    container.innerHTML = ""; // Clear the container
+    filteredTemples.forEach((temple) => {
+        const card = document.createElement("div");
+        card.classList.add("temple-card");
+        card.innerHTML = `
+            <img src="${temple.image}" alt="${temple.name}" loading="lazy">
+            <h2>${temple.name}</h2>
+            <p><strong>Location:</strong> ${temple.location}</p>
+            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+            <p><strong>Size:</strong> ${temple.size} sq ft</p>
+        `;
+        container.appendChild(card);
+    });
+}
+
+// Initial render with all temples
+renderTemples(temples);
+
+// Function to filter temples based on menu options
+function filterTemples(filter) {
+    let filteredTemples = [];
+
+    switch (filter) {
+        case "all":
+            filteredTemples = temples;
+            break;
+        case "old":
+            filteredTemples = temples.filter((temple) => parseInt(temple.dedicated.split(",")[0]) < 1900);
+            break;
+        case "new":
+            filteredTemples = temples.filter((temple) => parseInt(temple.dedicated.split(",")[0]) > 2000);
+            break;
+        case "large":
+            filteredTemples = temples.filter((temple) => temple.size > 90000);
+            break;
+        case "small":
+            filteredTemples = temples.filter((temple) => temple.size < 10000);
+            break;
+        default:
+            filteredTemples = temples;
+    }
+
+    renderTemples(filteredTemples);
+}
