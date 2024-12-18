@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles/review.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Review!</h1>
+    </header>
+
+    <main>
+        <p>Your product review has been successfully submitted.</p>
+        <p><strong>Total Reviews Submitted:</strong> <span id="reviewCount"></span></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rubia Magdalena Francesco, Madagascar</p>
+    </footer>
+
+    <script>
+        // Update Review Counter
+        let count = localStorage.getItem('reviewCount') || 0;
+        count++;
+        localStorage.setItem('reviewCount', count);
+        document.getElementById('reviewCount').textContent = count;
+    </script>
+</body>
+</html>

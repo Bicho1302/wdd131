@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f4f9;
+    color: #333;
+}
+
+header, footer {
+    text-align: center;
+    background-color: #470D29;
+    color: white;
+    padding: 1rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+form {
+    background-color: #e7dde5;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 450px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+label, legend {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.rating {
+    display: flex; /* Use Flexbox to align items side by side */
+    gap: 0.5rem; /* Add space between the stars */
+    margin-bottom: 1rem; /* Space between the stars and the next form field */
+}
+
+.rating label {
+    display: inline-flex; /* Ensures the stars remain clickable and inline */
+    align-items: center;
+    font-size: 1.5rem; /* Adjust star size */
+    cursor: pointer;
+}
+
+
+fieldset {
+    margin-bottom: 1rem;
+    border: none;
+}
+
+footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
