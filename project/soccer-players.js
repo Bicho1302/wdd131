@@ -60,7 +60,7 @@ const topPlayers = [
   document.querySelectorAll(".player-toggle").forEach((button, index) => {
     button.addEventListener("click", () => renderTopPlayer(index));
   });
-  
-  // Initialize with the first player
-  renderTopPlayer(0);
-  
+  document.querySelectorAll(".responsive-image").forEach((img) => {
+    img.style.width = "100%"; // Ensure full width in container
+    img.style.height = "auto"; // Maintain aspect ratio
+});
