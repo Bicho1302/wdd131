@@ -98,15 +98,3 @@ footer {
 footer p {
     margin: 0;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    main {
-        padding: 1rem;
-        gap: 1rem;
-    }
-
-    .player-stats {
-        width: 100%;
-    }
-}
