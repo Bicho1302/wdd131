@@ -185,3 +185,25 @@ footer {
     margin-top: 10px; /* Adds some spacing from the text */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
 }
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.buttons button {
+    background-color: #077e2e; /* Gold button */
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #e6be00; /* Slightly darker gold */
+}
