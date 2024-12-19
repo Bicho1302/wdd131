@@ -1,0 +1,179 @@
+/* General Mobile Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #008000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: #005700;
+}
+
+nav ul li {
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+nav ul li a:hover {
+    background-color: #004500;
+    border-radius: 5px;
+}
+
+main {
+    padding: 10px;
+}
+
+/* Moments Page */
+.moments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.moment {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.moment img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.moment h3 {
+    margin: 10px 0 5px;
+}
+
+.moment p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Stats Page */
+.player-stats {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.player-stats img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.player-stats h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
+
+.player-stats ul {
+    padding: 0;
+    list-style: none;
+}
+
+.player-stats li {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+/* Home Page */
+.players-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.player {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.player img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.player h3 {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Landscape View */
+@media (orientation: landscape) {
+    .moments-container,
+    .players-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .moment,
+    .player {
+        width: 45%;
+    }
+
+    .player-stats {
+        margin: 10px;
+    }
+}
+
+/* Small Adjustments for Very Small Screens */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .player-stats h2 {
+        font-size: 1rem;
+    }
+}
